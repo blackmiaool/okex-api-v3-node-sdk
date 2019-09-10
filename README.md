@@ -5,9 +5,9 @@
 	
 使用指南
 
-	const { PublicClient } = require(‘@okfe/okex-node’);
-	const { V3WebsocketClient } = require(‘@okfe/okex-node’);
-	const { AuthenticatedClient } = require(‘@okfe/okex-node’);
+	const { PublicClient } = require('@okfe/okex-node');
+	const { V3WebsocketClient } = require('@okfe/okex-node');
+	const { AuthenticatedClient } = require('@okfe/okex-node');
 	const pClient = new PublicClient();
 	const authClient = new AuthenticatedClient(key,secret, passphrase);
 	const wss = new V3WebsocketClient();
@@ -23,7 +23,7 @@ https://github.com/zisuting/okex-node-sdk-sample
 
 	wss.connect();
 	wss.login(key, secret,passpharase )
-	wss.subscribe(‘spot/depth5:ETH-USDT’);
+	wss.subscribe('spot/depth5:ETH-USDT');
 	
 
 接口  | 说明
@@ -40,7 +40,7 @@ checksum(data)	| 检查数据有效性
 
 用法实例如:
 
-	pClient.spot().getSpotBook(‘BTC-USDT’, {‘size’:’10’});
+	pClient.spot().getSpotBook('BTC-USDT', {'size':'10'});
 
 
 <mark>币币API</mark>
@@ -105,7 +105,7 @@ ett().getDefinePrice(ett)	|获取ETT清算历史定价
 用法实例如下：
 
 	authClient.spot().getAccounts();
-	authClient.swap().postOrder({“match_price”:”1”, “price”:”109”,”type”:”1”, “instrument_id”:”BTC-USD_SWAP”});
+	authClient.swap().postOrder({"match_price":"1", "price":"109","type":"1", "instrument_id":"BTC-USD_SWAP"});
 
 
 <mark>币币API相关</mark>
